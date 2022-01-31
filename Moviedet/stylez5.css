@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Montserrat:wght@100&family=Poppins:wght@200;400;500&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(160, 160, 160);
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+nav {
+  height: 80px;
+  background: #2c3e50;
+}
+nav img {
+  width: 250px;
+  position: absolute;
+  top: 1px;
+  left: 5%;
+}
+nav ul {
+  float: right;
+  margin-right: 25px;
+  z-index: 1;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+nav ul li a {
+  position: relative;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 5px 0;
+  text-decoration: none;
+}
+nav ul li a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s linear;
+}
+nav ul li a:hover:before {
+  transform: scaleX(1);
+  transform-origin: right;
+  color: white;
+}
+nav ul li a:hover {
+  color: white;
+}
+label #btn,
+label #cancel {
+  color: white;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 1496px) {
+  nav img {
+    left: 5%;
+  }
+  h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 944px) {
+  nav img {
+    left: 5%;
+    top: 1px;
+    width: 250px;
+  }
+  nav ul li a {
+    font-size: 17px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 860px) {
+  label #btn {
+    display: block;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #34495e;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  #check:checked ~ label #btn {
+    display: none;
+  }
+  #check:checked ~ label #cancel {
+    display: block;
+  }
+}
+.mainTxt {
+  height: 44%;
+  position: relative;
+  color: white;
+}
+.divUptxtSear {
+  width: fit-content;
+  height: fit-content;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+}
+/* label .menu #btns,
+label .close #cancel {
+  color: white;
+} */
+h1 {
+  font-weight: 400;
+}
+.homePage {
+  width: 100%;
+  height: auto;
+}
+.movie img {
+  width: 300px;
+  height: 320px;
+}
+.grandParent {
+  width: 100%;
+  height: auto;
+  background: #f6f6f6;
+}
+.movies {
+  width: 80vw;
+  height: auto;
+  margin: auto;
+  /* background: #636e72; */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  transition: all 0.2 linear;
+}
+.movie {
+  height: 400px;
+  background: #f6f6f6;
+  box-shadow: 0 0 20px #2c3e50;
+  /* flex: 1 1 300px; */
+  width: 300px;
+  margin: 20px;
+  margin-top: 100px;
+}
+.content:hover {
+  opacity: 1;
+}
+.content {
+  width: 100%;
+  height: 100%;
+}
+/* .content img {
+  width: 100%;
+  height: 83%;
+} */
+/* .content h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+} */
+.movie h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+.recentlyAdded span {
+  color: red;
+  font-size: 24px;
+}
+.divParens {
+  background: #293541;
+  width: 100%;
+  height: 270px;
+  position: relative;
+}
+.txtBoxSear {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: fit-content;
+  height: fit-content;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+}
+.txtBox {
+  border: none;
+  margin-right: 2px;
+  border-radius: 50px;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+  outline: none;
+}
+.btnSearch {
+  background: white;
+  border: none;
+  padding: 7px;
+  border-radius: 50%;
+  width: 31px;
+  height: 31px;
+}
+@media (max-width: 760px) {
+  .grandParent {
+    height: auto;
+  }
+}
+.btnView {
+  width: 100%;
+  height: 100%;
+  border-color: white;
+}
+body > nav > label {
+  display: block;
+}
+#myBtn {
+  background: #f6f6f6;
+  border: none;
+  cursor: pointer;
+}
+#popUpContent {
+  font-weight: bold;
+  width: 85%;
+}
+#star {
+  width: 5%;
+  color: #cece15;
+  margin-top: 3px;
+}
+#divCombine {
+  display: flex;
+  width: 100%;
+}
+#rating {
+  width: 10%;
+  text-align: end;
+  font-weight: bold;
+}
+@media (max-width: 390px) {
+  #star {
+    width: 10%;
+  }
+  #modal-content {
+    width: 300px;
+    height: 417px;
+  }
+  #ov {
+    height: 250px;
+  }
+}
+@media (min-width: 391px) {
+  #modal-content {
+    width: 350px;
+    height: 450px;
+  }
+  #ov {
+    height: 330px;
+  }
+}
+#ov {
+  margin-top: 20px;
+  text-align: justify;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 5px;
+}
+/* scrollbar in overview*/
+::-webkit-scrollbar {
+  width: 0.3em;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(160, 160, 160);
+}
+/*scroll bar end*/
+/* overView div responsive*/
+/* overView div responsive end*/
+#language {
+  color: #ff0000;
+}
+/*pop css*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+#modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*About CSS*/
+#aboutContent {
+  text-align: justify;
+}
+#socialBtn {
+  padding: 6px;
+  cursor: pointer;
+  color: black;
+}
+.divCmbine h1 {
+  margin-top: 0;
+}
+@media (max-width: 520px) {
+  .aboutOutrDiv {
+    width: 80%;
+    height: 500px;
+    margin: 30px auto;
+    display: block;
+  }
+  .divAboutContent {
+    width: 100%;
+    height: auto;
+  }
+  .divImg img {
+    width: 100%;
+  }
+  .divSocial {
+    display: flex;
+    margin-left: 38%;
+    margin-top: 11px;
+  }
+}
+@media (min-width: 521px) {
+  .divDevlprImg {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  .aboutOutrDiv {
+    width: 80%;
+    height: 500px;
+    margin: 30px auto;
+    display: block;
+  }
+  .divAboutContent {
+    width: 100%;
+    height: auto;
+  }
+  .divCmbine {
+    margin: 0px 0px;
+  }
+  .divCmbine h1 {
+    margin-top: 25px;
+  }
+  .divImg img {
+    width: 400px;
+  }
+  .divSocial {
+    display: flex;
+    margin-left: 44%;
+    margin-top: 11px;
+  }
+}
+@media (min-width: 1071px) {
+  .aboutOutrDiv {
+    width: 90%;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    padding: 10px 0px 0px 78px;
+  }
+  .divAboutContent {
+    width: 100%;
+    height: 100%;
+  }
+  .divCmbine {
+    margin: 0px 30px;
+  }
+  .divCmbine h1 {
+    margin-top: 0;
+  }
+  .divImg img {
+    width: 400px;
+  }
+  .divDevlprImg {
+    width: 57%;
+    height: auto;
+    margin-top: 0;
+  }
+  .divSocial {
+    display: flex;
+    margin-left: 44%;
+    margin-top: 11px;
+  }
+}
+/*About CSS End*/
+/*horizontal scroll item*/
+.wrapper {
+  height: 408px;
+  width: 100%;
+  border: 1px solid #ddd;
+  display: flex;
+  overflow-x: auto;
+}
+/* .wrapper::-webkit-scrollbar {
+  width: 0;
+  color: rgb(255, 1, 1);
+} */
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+  background-color: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background: #2c3e50;
+  border-radius: 10px;
+}
+.wrapper .item {
+  min-width: 300px;
+  height: 400px;
+  line-height: 110px;
+  text-align: center;
+  background-color: #ddd;
+  margin-right: 5px;
+}
+#btnHorizScroll {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.item img {
+  width: 300px;
+  height: 320px;
+}
+/*horizontal scroll item End*/
